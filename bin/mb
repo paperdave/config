@@ -1,0 +1,18 @@
+#!/bin/bash
+# mb [-b]
+# rebuilds bun, if -b is passed, will regenerate bindings as well
+now=$(date +%s)
+
+generate_bindings=false
+if [ "$1" == "-b" ]; then
+  generate_bindings=true
+fi
+
+cd ~/bun
+if [ "$generate_bindings" = true ]; then
+  make clean-bindings
+  make builtins
+  make bindings -j32
+fi
+make hardcoded
+make dev
