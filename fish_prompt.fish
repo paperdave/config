@@ -33,6 +33,7 @@ function fish_prompt
     end
   end
 
+  # print the $
   if test "$exitcode" -ne 0
     printf (set_color brred)" \$"(set_color brwhite)" "
   else

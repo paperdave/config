@@ -1,18 +1,43 @@
 #!/bin/bash
-# mb [-b]
+# mb [-b] 
 # rebuilds bun, if -b is passed, will regenerate bindings as well
-now=$(date +%s)
+now=$(date +%s)  
+
+last_hash=$(cat ~/config/.mb_hardcoded_hash 2>/dev/null)
 
 generate_bindings=false
 if [ "$1" == "-b" ]; then
   generate_bindings=true
 fi
 
-cd ~/bun
-if [ "$generate_bindings" = true ]; then
-  make clean-bindings
-  make builtins
-  make bindings -j32
+generate_hardcoded=false
+if [ "$1" == "-m" ]; then
+  generate_hardcoded=true
+else
+  hash=$(find ./src/js/{node,bun,thirdparty} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
+  if [ "$hash" != "$last_hash" ]; then
+    generate_hardcoded=true
+  fi
 fi
-make hardcoded
-make dev
+
+cd ~/bun
+
+function build() {
+  if ! make $1; then
+    terminal-notifier -title "mb" -message "Bun Build Failed" -sound "default"
+    exit
+  fi
+}
+
+if [ "$generate_bindings" = true ]; then 
+  build clean-bindings
+  build builtins 
+  build bindings -j16
+fi
+if [ "$generate_hardcoded" = true ]; then 
+  build hardcoded
+  echo $hash > ~/config/.mb_hardcoded_hash
+fi
+build dev
+
+terminal-notifier -title "mb" -message "Bun Compiled Successfully" -sound "default"
