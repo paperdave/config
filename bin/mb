@@ -3,24 +3,12 @@
 # rebuilds bun, if -b is passed, will regenerate bindings as well
 now=$(date +%s)  
 
-last_hash=$(cat ~/config/.mb_hardcoded_hash 2>/dev/null)
-
 generate_bindings=false
 if [ "$1" == "-b" ]; then
   generate_bindings=true
 fi
 
-generate_hardcoded=false
-if [ "$1" == "-m" ]; then
-  generate_hardcoded=true
-else
-  hash=$(find ./src/js/{node,bun,thirdparty} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
-  if [ "$hash" != "$last_hash" ]; then
-    generate_hardcoded=true
-  fi
-fi
-
-cd ~/bun
+cd $HOME/code/bun
 
 function build() {
   if ! make $1; then
@@ -33,10 +21,6 @@ if [ "$generate_bindings" = true ]; then
   build clean-bindings
   build builtins 
   build bindings -j16
-fi
-if [ "$generate_hardcoded" = true ]; then 
-  build hardcoded
-  echo $hash > ~/config/.mb_hardcoded_hash
 fi
 build dev
 

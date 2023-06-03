@@ -1,0 +1,2 @@
+#!/bin/bash
+exec $HOME/.zig/bin/zigup --install-dir $HOME/.zig "$@"
