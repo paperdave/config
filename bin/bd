@@ -1,5 +1,5 @@
 #!/bin/bash
-# bd
+# bd [args]
 # run bun-debug with dave's opinionated defaults
 src=$HOME/Code/bun
 hash_location=$HOME/Code/config/.mb_hardcoded_hash
@@ -17,12 +17,12 @@ if [ ! -f $file ]; then
 fi
 
 last_hash=$(cat $hash_location 2>/dev/null)
-hash=$(find ./src/js/{node,bun,thirdparty} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
+hash=$(find $src/src/js/{node,bun,thirdparty} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
 if [ "$hash" != "$last_hash" ]; then
   cwd=$(pwd)
   cd $src
   printf "\e[0;30mbun-debug(%s) [rebundling hardcoded modules]\e[0m" "$(cd $src; git rev-parse --abbrev-ref HEAD)" >&2
-  NODE_ENV=production bun src/js/build-hardcoded.ts > /dev/null
+  NODE_ENV=production bun src/js/build-esm.ts > /dev/null
   echo $hash > $hash_location
   cd $cwd
   printf "\r"
@@ -33,5 +33,5 @@ if [ ! -d $temp/bun-debug-path ]; then
   ln -s $file $temp/bun-debug-path/bun
 fi
 
-printf "\e[0;30mbun-debug(%s) [compiled %s]\e[0m\n" "$(cd $src; git rev-parse --abbrev-ref HEAD)" "$(date -r $file +"%F %H:%M")" >&2
+printf "\e[0;30mbun-debug(%s) [compiled %s]              \e[0m\n" "$(cd $src; git rev-parse --abbrev-ref HEAD)" "$(date -r $file +"%F %H:%M")" >&2
 PATH=$temp/bun-debug-path:$PATH exec bun "$@"

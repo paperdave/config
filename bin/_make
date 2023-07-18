@@ -1,0 +1,14 @@
+#!/bin/bash
+# _make [make] args
+# wrapper for make
+wrapped_command=$1
+shift
+
+# if we are anywhere within ~/code/bun, cd to ~/code/bun
+# this helps me if i'm inside of the webkit submodule
+if [[ "$PWD" == *code/bun* ]]; then
+  cd ~/code/bun
+fi
+
+tone "$wrapped_command" "$@"
+exit $?

@@ -14,5 +14,5 @@ if git branch | grep -q "$branch"; then
 else
   main_branch=$(git symbolic-ref refs/remotes/origin/HEAD)
   git fetch origin "$main_branch"
-  git checkout -b "$branch" "$main_branch"
+  git checkout "$main_branch" && git branch "$branch" git checkout "$branch"
 fi

@@ -28,6 +28,8 @@ function fish_prompt
     switch "$PWD"
       case "$HOME*"
         printf "~"(string sub -s (math (string length $HOME) + 1) "$PWD")
+      case "/tmp/scratchpad_*"
+        printf (set_color brred)"scratch"
       case '*'
         printf "%s" "$PWD"
     end
