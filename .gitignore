@@ -1,3 +1,5 @@
 node_modules
 .mb_hardcoded_hash
 .DS_Store
+# compile it youself
+bin/setsid

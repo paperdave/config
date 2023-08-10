@@ -29,7 +29,7 @@ function fish_prompt
       case "$HOME*"
         printf "~"(string sub -s (math (string length $HOME) + 1) "$PWD")
       case "/tmp/scratchpad_*"
-        printf (set_color brred)"scratch"
+        printf (set_color brred)"scratch"(set_color grey)(string sub -s 32 "$PWD")
       case '*'
         printf "%s" "$PWD"
     end

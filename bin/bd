@@ -7,7 +7,7 @@ hash_location=$HOME/Code/config/.mb_hardcoded_hash
 file=$src/packages/debug-bun-darwin-aarch64/bun-debug
 temp=/tmp
 
-if ! env | grep "BUN_DEBUG_" -q; then
+if ! env | grep -v "BUN_DEBUG_JS" | grep "BUN_DEBUG_" -q; then
   export BUN_DEBUG_QUIET_LOGS=1
 fi
 
@@ -17,12 +17,12 @@ if [ ! -f $file ]; then
 fi
 
 last_hash=$(cat $hash_location 2>/dev/null)
-hash=$(find $src/src/js/{node,bun,thirdparty} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
+hash=$(find $src/src/js/{node,bun,thirdparty,builtins} -type f | sort | xargs cat | sha1sum | cut -d' ' -f1)
 if [ "$hash" != "$last_hash" ]; then
   cwd=$(pwd)
   cd $src
   printf "\e[0;30mbun-debug(%s) [rebundling hardcoded modules]\e[0m" "$(cd $src; git rev-parse --abbrev-ref HEAD)" >&2
-  NODE_ENV=production bun src/js/build-esm.ts > /dev/null
+  NODE_ENV=production bun src/js/_codegen/index.ts > /dev/null
   echo $hash > $hash_location
   cd $cwd
   printf "\r"

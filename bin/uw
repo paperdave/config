@@ -1,0 +1,27 @@
+#!/bin/bash
+# uw [directory]
+# unwrap a directory, aka mv everything in the directory up one level and delete the directory
+
+if [ -z "$1" ] || [ $# -gt 1 ]; then
+  echo "usage: uw [directory]"
+  exit 1
+fi
+
+resolved=$(realpath "$1")
+
+if [ ! -d "$resolved" ]; then
+  echo "$resolved is not a directory"
+  exit 1
+fi
+
+if [[ $(basename "$(pwd)") == "scratchpad_"* ]]; then
+  rm -rf bun.lockb index.ts package.json tsconfig.json node_modules
+fi
+
+mv $resolved ${resolved}___tmp
+cd ${resolved}___tmp
+mv -f * ..
+mv -f .* .. 2>/dev/null
+cd ..
+rm -rf ${resolved}___tmp
+echo "Unwrapped $resolved"

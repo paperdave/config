@@ -1,8 +1,8 @@
 #!/bin/bash
 # bvm [version]
 # installs a specific version of bun
-if [ "$1" = "canary" ];
-  bun upgrade --canary
+if [ "$1" = "canary" ]; then
+  bun upgrade --canary;
 else
   bash /Users/dave/Code/bun/src/cli/install.sh "bun-v$1"
 fi

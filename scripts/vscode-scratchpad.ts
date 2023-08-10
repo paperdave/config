@@ -78,6 +78,15 @@ fs.mkdirSync(root + "/.vscode");
 fs.writeFileSync(
   root + "/.vscode/settings.json",
   JSON.stringify({
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      ".vscode": true,
+    },
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": HSLToRGB(hue, 0.5, 0.5),
       "titleBar.activeForeground": "#ffffff",

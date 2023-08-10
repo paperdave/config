@@ -30,7 +30,7 @@ if [ "$tookTime" -gt "$THRESHOLD" ] || [ "$exitCode" != 0 ]; then
     sound="/System/Library/Sounds/Bottle.aiff"
   fi
 
-  afplay -v $normalizedVolume $sound
+  setsid afplay -v $normalizedVolume $sound
 fi
 
 exit $exitCode

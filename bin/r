@@ -1,0 +1,27 @@
+#!/bin/bash
+# r [script name]
+# runs/opens something
+
+if [ -z "$1" ] || [ $# -gt 1 ]; then
+  echo "usage: r [script]"
+  exit 1
+fi
+
+absolutepath=$(realpath "$1")
+
+if [ -f "$absolutepath" ]; then
+  if [ "${absolutepath: -3}" == ".sh" ]; then
+    exec bash "$absolutepath"
+  fi
+  if [ "${absolutepath: -4}" == ".zig" ]; then
+    exec zig run "$absolutepath"
+  fi
+  if [ "${absolutepath: -4}" == ".mp4" ]; then
+    mpv "$absolutepath"
+  fi
+fi
+if [ -d "$absolutepath" ]; then
+  cd "$absolutepath"
+fi
+
+exec bun run $1
