@@ -9,6 +9,5 @@ shift
 if [[ "$PWD" == *code/bun* ]]; then
   cd ~/code/bun
 fi
-
 tone "$wrapped_command" "$@"
 exit $?

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # tone [command] [args...]
 # need `brew install switchaudio-osx`
-THRESHOLD=0
+THRESHOLD=1
 PING_VOLUME=1.5
 
 startTime=$(date +%s)
@@ -13,6 +13,7 @@ tookTime=$(($endTime - $startTime))
 
 if [ "$tookTime" -gt "$THRESHOLD" ] || [ "$exitCode" != 0 ]; then
   # play a sound when a long running command finishes
+
   # currentAudioSource="$(SwitchAudioSource -c)"
   # if [ "$currentAudioSource" = "MacBook Pro Speakers" ]; then
   #   exit $exitCode
@@ -30,7 +31,7 @@ if [ "$tookTime" -gt "$THRESHOLD" ] || [ "$exitCode" != 0 ]; then
     sound="/System/Library/Sounds/Bottle.aiff"
   fi
 
-  setsid afplay -v $normalizedVolume $sound
+  (setsid afplay -v $normalizedVolume $sound &)
 fi
 
 exit $exitCode
