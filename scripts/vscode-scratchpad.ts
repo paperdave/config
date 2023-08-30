@@ -190,7 +190,7 @@ Bun.spawnSync({
 console.log(`Scratchpad is at ${root}`);
 
 Bun.spawnSync({
-  cmd: ["/run", "code", "-n", root, "-w"],
+  cmd: ["/run", "cursor", "-n", root, "-w"],
 });
 
 if (fs.existsSync(root + ".remove")) {
