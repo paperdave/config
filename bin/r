@@ -7,7 +7,7 @@ if [ -z "$1" ] || [ $# -gt 1 ]; then
   exit 1
 fi
 
-absolutepath=$(realpath "$1")
+absolutepath=$(realpath "$1" 2>/dev/null)
 
 if [ -f "$absolutepath" ]; then
   if [ "${absolutepath: -3}" == ".sh" ]; then

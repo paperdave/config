@@ -7,7 +7,7 @@ hash_location=$HOME/Code/config/.mb_hardcoded_hash
 file=$src/packages/debug-bun-darwin-aarch64/bun-debug
 temp=/tmp
 
-if ! env | grep -v "BUN_DEBUG_JS" | grep "BUN_DEBUG_" -q; then
+if [ -z "$LOUD" ]; then
   export BUN_DEBUG_QUIET_LOGS=1
 fi
 
@@ -33,5 +33,5 @@ if [ ! -d $temp/bun-debug-path ]; then
   ln -s $file $temp/bun-debug-path/bun
 fi
 
-printf "\e[0;30mbun-debug(%s) [compiled %s]              \e[0m\n" "$(cd $src; git rev-parse --abbrev-ref HEAD)" "$(date -r $file +"%F %H:%M")" >&2
+# printf "\e[0;30mbun-debug(%s) [compiled %s]              \e[0m\n" "$(cd $src; git rev-parse --abbrev-ref HEAD)" "$(date -r $file +"%F %H:%M")" >&2
 PATH=$temp/bun-debug-path:$PATH exec bun "$@"
