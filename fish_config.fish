@@ -10,5 +10,3 @@ function _wrap_with_custom
     set absolutePath (which $argv[1])
     alias $argv[1] $argv[2]" $absolutePath"
 end
-
-_wrap_with_custom make _make

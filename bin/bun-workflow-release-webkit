@@ -11,58 +11,61 @@ cd "$workdir"
 
 # check if the release is already done to npm
 autobuild_tag=$(gh release list --repo oven-sh/webkit -L 5 | grep '^autobuild' | head -1 | awk '{print $1}' | sed 's/autobuild-//g')
+
+# FIXME(paperdave): this check is incorrect. npm is already published
 # if bun i bun-webkit@0.0.1-$autobuild_tag > /dev/null 2> /dev/null; then
 #   echo "Error: Release $autobuild_tag is already on NPM"
 #   echo "Run \`bun install bun-webkit@0.0.1-$autobuild_tag\` to install it in bun"
 #   exit 1
 # fi
 
-# echo "Publishing WebKit Upgrade to $autobuild_tag"
+echo "Publishing WebKit Upgrade to $autobuild_tag"
 
 read -p "Enter the release tag (e.g. 2023-june29): " release_tag
-# read -p "Enter the release name: " release_name
+read -p "Enter the release name: " release_name
 
-# # do the release
-# gh release create "$release_tag" --draft --repo oven-sh/webkit -t "$release_name"
-# gh release download --repo oven-sh/webkit $autobuild_tag
-# gh release upload $release_tag *.tar.gz --repo oven-sh/webkit
-# gh release edit 2023-sept15-1 --draft=false --repo oven-sh/webkit
+# do the release
+# FIXME(paperdave): this create line asks a bunch of stuff in TTY for some reason
+gh release create "$release_tag" --draft --repo oven-sh/webkit -t "$release_name"
+gh release download --repo oven-sh/webkit autobuild-$autobuild_tag
+gh release upload $release_tag *.tar.gz --repo oven-sh/webkit
+gh release edit $release_tag --draft=false --repo oven-sh/webkit
 
-# # there is a github action that will upload the release to NPM. it takes some time to run.
-# # TODO(paperdave): could try `bun install` in a loop with some delay, or listen to registry pub events.
-# echo "Waiting 20 seconds for GitHub actions to upload the release to NPM"
-# sleep 20
+# there is a github action that will upload the release to NPM. it takes some time to run.
+# TODO(paperdave): could try `bun install` in a loop with some delay, or listen to registry pub events.
+echo "Waiting 20 seconds for GitHub actions to upload the release to NPM"
+sleep 20
 
 cd $bun_repo
 
 # add to workflows
-# TODO(paperdave): this doesnt work rn
-edited_workflows=()
-for workflow in ./.github/workflows/*; do
-  if ! grep -q "webkit_url: \"https" "$workflow"; then
-    # we need to replace this string: https://github.com/oven-sh/WebKit/releases/download/[...]
-    # with the old to tag to the new tag
-    sed -i '' "s|https://github.com/oven-sh/WebKit/releases/download/.*/bun|https://github.com/oven-sh/WebKit/releases/download/$release_tag/bun|" "$workflow"
+# FIXME(paperdave): this doesnt work rn
+# edited_workflows=()
+# for workflow in ./.github/workflows/*; do
+#   if ! grep -q "webkit_url: \"https" "$workflow"; then
+#     # we need to replace this string: https://github.com/oven-sh/WebKit/releases/download/[...]
+#     # with the old to tag to the new tag
+#     sed -i '' "s|https://github.com/oven-sh/WebKit/releases/download/.*/bun|https://github.com/oven-sh/WebKit/releases/download/$release_tag/bun|" "$workflow"
     
-  fi
-done
+#   fi
+# done
 
-# # disable using self-compiled WebKit in case that was enabled
-# rm -rf ./src/bun.js/WebKit/WebkitBuild/Release
+# disable using self-compiled WebKit in case that was enabled
+rm -rf ./src/bun.js/WebKit/WebkitBuild/Release
 
-# # install webkit
-# bun i bun-webkit@0.0.1-$autobuild_tag
+# install webkit
+bun i bun-webkit@0.0.1-$autobuild_tag
 
-# # ensure the build works
-# make cpp
+# ensure the build works
+make cpp
 
-# # upgrade the submodule
-# cd src/bun.js/WebKit
-# git reset --hard $autobuild_tag # (discard any changes, L)
+# upgrade the submodule
+cd src/bun.js/WebKit
+git reset --hard $autobuild_tag # (discard any changes, L)
 
-# # commit the new version of webkit
-# git reset # (unstage all files)
-# git add package.json bun.lockb src/bun.js/WebKit
-# git commit -m "chore: Upgrade WebKit to $autobuild_tag"
+# commit the new version of webkit
+git reset # (unstage all files)
+git add package.json bun.lockb src/bun.js/WebKit
+git commit -m "chore: Upgrade WebKit to $autobuild_tag"
 
-# echo "WebKit Upgrade Done
+echo "WebKit Upgrade Done

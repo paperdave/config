@@ -1,5 +1,9 @@
 function fish_prompt
     set -l exitcode "$status"
+
+    # print the "show cursor" escape code in case a program exited while the cursor was hidden
+    printf "\033[?25h"
+
     printf (set_color reset)(set_color grey)
     printf "\n\033[1F"
 
