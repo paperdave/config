@@ -1,0 +1,466 @@
+diff --git a/extensions/git/resources/icons/dark/status-added.svg b/extensions/git/resources/icons/dark/status-added.svg
+index cdc40f45f16..51c827c138a 100644
+--- a/extensions/git/resources/icons/dark/status-added.svg
++++ b/extensions/git/resources/icons/dark/status-added.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#3c8746" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     A
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-conflict.svg b/extensions/git/resources/icons/dark/status-conflict.svg
+index 53b243c8b9f..2705d7f5274 100644
+--- a/extensions/git/resources/icons/dark/status-conflict.svg
++++ b/extensions/git/resources/icons/dark/status-conflict.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#7F4E7E" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     C
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-copied.svg b/extensions/git/resources/icons/dark/status-copied.svg
+index 7bd78c9427e..5f30e68d187 100644
+--- a/extensions/git/resources/icons/dark/status-copied.svg
++++ b/extensions/git/resources/icons/dark/status-copied.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#692C77" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     C
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-deleted.svg b/extensions/git/resources/icons/dark/status-deleted.svg
+index e7596e2e2ad..411af8bd562 100644
+--- a/extensions/git/resources/icons/dark/status-deleted.svg
++++ b/extensions/git/resources/icons/dark/status-deleted.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#9E121D" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     D
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-ignored.svg b/extensions/git/resources/icons/dark/status-ignored.svg
+index 85abc367a29..29bef655d99 100644
+--- a/extensions/git/resources/icons/dark/status-ignored.svg
++++ b/extensions/git/resources/icons/dark/status-ignored.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#969696" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     I
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-modified.svg b/extensions/git/resources/icons/dark/status-modified.svg
+index d0de37d3468..aafb1497158 100644
+--- a/extensions/git/resources/icons/dark/status-modified.svg
++++ b/extensions/git/resources/icons/dark/status-modified.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#1B80B2" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     M
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-renamed.svg b/extensions/git/resources/icons/dark/status-renamed.svg
+index a77fb41179a..5ffb41fcfd5 100644
+--- a/extensions/git/resources/icons/dark/status-renamed.svg
++++ b/extensions/git/resources/icons/dark/status-renamed.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#CC6633" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     R
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/dark/status-type-changed.svg b/extensions/git/resources/icons/dark/status-type-changed.svg
+index ae504ae1881..0cb57e6ccdd 100644
+--- a/extensions/git/resources/icons/dark/status-type-changed.svg
++++ b/extensions/git/resources/icons/dark/status-type-changed.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#B21B8F" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     T
+   </text>
+ </svg>
+diff --git a/extensions/git/resources/icons/dark/status-untracked.svg b/extensions/git/resources/icons/dark/status-untracked.svg
+index c6a48e14f08..1a31b1daf27 100644
+--- a/extensions/git/resources/icons/dark/status-untracked.svg
++++ b/extensions/git/resources/icons/dark/status-untracked.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#6C6C6C" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     U
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-added.svg b/extensions/git/resources/icons/light/status-added.svg
+index 587fc08f5f5..698c52ce185 100644
+--- a/extensions/git/resources/icons/light/status-added.svg
++++ b/extensions/git/resources/icons/light/status-added.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#2d883e" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     A
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-conflict.svg b/extensions/git/resources/icons/light/status-conflict.svg
+index b6088ecd083..d006bbff47b 100644
+--- a/extensions/git/resources/icons/light/status-conflict.svg
++++ b/extensions/git/resources/icons/light/status-conflict.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#9B4F96" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     C
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-copied.svg b/extensions/git/resources/icons/light/status-copied.svg
+index 151fdb2cdbe..85479946858 100644
+--- a/extensions/git/resources/icons/light/status-copied.svg
++++ b/extensions/git/resources/icons/light/status-copied.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#682079" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     C
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-deleted.svg b/extensions/git/resources/icons/light/status-deleted.svg
+index 7ed166accfe..bfadfd89049 100644
+--- a/extensions/git/resources/icons/light/status-deleted.svg
++++ b/extensions/git/resources/icons/light/status-deleted.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#B9131A" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     D
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-ignored.svg b/extensions/git/resources/icons/light/status-ignored.svg
+index 85abc367a29..29bef655d99 100644
+--- a/extensions/git/resources/icons/light/status-ignored.svg
++++ b/extensions/git/resources/icons/light/status-ignored.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#969696" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     I
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-modified.svg b/extensions/git/resources/icons/light/status-modified.svg
+index ff338b81410..0d01153a79e 100644
+--- a/extensions/git/resources/icons/light/status-modified.svg
++++ b/extensions/git/resources/icons/light/status-modified.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#007ACC" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     M
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-renamed.svg b/extensions/git/resources/icons/light/status-renamed.svg
+index a77fb41179a..5ffb41fcfd5 100644
+--- a/extensions/git/resources/icons/light/status-renamed.svg
++++ b/extensions/git/resources/icons/light/status-renamed.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#CC6633" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     R
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/git/resources/icons/light/status-type-changed.svg b/extensions/git/resources/icons/light/status-type-changed.svg
+index ae504ae1881..0cb57e6ccdd 100644
+--- a/extensions/git/resources/icons/light/status-type-changed.svg
++++ b/extensions/git/resources/icons/light/status-type-changed.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#B21B8F" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     T
+   </text>
+ </svg>
+diff --git a/extensions/git/resources/icons/light/status-untracked.svg b/extensions/git/resources/icons/light/status-untracked.svg
+index c6a48e14f08..1a31b1daf27 100644
+--- a/extensions/git/resources/icons/light/status-untracked.svg
++++ b/extensions/git/resources/icons/light/status-untracked.svg
+@@ -1,6 +1,6 @@
+ <svg width="14px" height="14px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+   <rect fill="#6C6C6C" x="0" y="0" width="100" height="100" rx="35" ry="35"/>
+-  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
++  <text x="50" y="75" font-size="75" text-anchor="middle" style="font-family: "Rec Mono Duotone", Menlo, Monaco, Consolas, &quot;Droid Sans Mono&quot;, &quot;Inconsolata&quot;, &quot;Courier New&quot;, monospace, &quot;Droid Sans Fallback&quot;;" fill="white">
+     U
+   </text>
+-</svg>
+\ No newline at end of file
++</svg>
+diff --git a/extensions/markdown-language-features/media/markdown.css b/extensions/markdown-language-features/media/markdown.css
+index 168f6a8a862..4791a6a69d8 100644
+--- a/extensions/markdown-language-features/media/markdown.css
++++ b/extensions/markdown-language-features/media/markdown.css
+@@ -4,7 +4,7 @@
+  *--------------------------------------------------------------------------------------------*/
+ 
+ html, body {
+-	font-family: var(--markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif);
++	font-family: var(--markdown-font-family, Recursive, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif);
+ 	font-size: var(--markdown-font-size, 14px);
+ 	padding: 0 26px;
+ 	line-height: var(--markdown-line-height, 22px);
+diff --git a/extensions/markdown-language-features/package.json b/extensions/markdown-language-features/package.json
+index 749673f151d..1a2dce9a81f 100644
+--- a/extensions/markdown-language-features/package.json
++++ b/extensions/markdown-language-features/package.json
+@@ -343,7 +343,7 @@
+         },
+         "markdown.preview.fontFamily": {
+           "type": "string",
+-          "default": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
++          "default": "Recursive, -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+           "description": "%markdown.preview.fontFamily.desc%",
+           "scope": "resource"
+         },
+diff --git a/src/vs/base/browser/ui/contextview/contextview.ts b/src/vs/base/browser/ui/contextview/contextview.ts
+index 60eed5be4a8..2f1f4c3da4c 100644
+--- a/src/vs/base/browser/ui/contextview/contextview.ts
++++ b/src/vs/base/browser/ui/contextview/contextview.ts
+@@ -408,14 +408,14 @@ const SHADOW_ROOT_CSS = /* css */ `
+ 	}
+ 
+ 	:host {
+-		font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif;
++		font-family: Recursive, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+ 	}
+ 
+-	:host-context(.mac) { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+-	:host-context(.mac:lang(zh-Hans)) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+-	:host-context(.mac:lang(zh-Hant)) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+-	:host-context(.mac:lang(ja)) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
+-	:host-context(.mac:lang(ko)) { font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
++	:host-context(.mac) { font-family: Recursive, -apple-system, BlinkMacSystemFont, sans-serif; }
++	:host-context(.mac:lang(zh-Hans)) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
++	:host-context(.mac:lang(zh-Hant)) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
++	:host-context(.mac:lang(ja)) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
++	:host-context(.mac:lang(ko)) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
+ 
+ 	:host-context(.windows) { font-family: "Segoe WPC", "Segoe UI", sans-serif; }
+ 	:host-context(.windows:lang(zh-Hans)) { font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif; }
+diff --git a/src/vs/code/browser/workbench/callback.html b/src/vs/code/browser/workbench/callback.html
+index 4f54d4d1c97..371f6b55b22 100644
+--- a/src/vs/code/browser/workbench/callback.html
++++ b/src/vs/code/browser/workbench/callback.html
+@@ -78,7 +78,7 @@
+ 				display: flex;
+ 				flex-direction: column;
+ 				color: white;
+-				font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
++				font-family: Recursive, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+ 				background-color: #2C2C32;
+ 			}
+ 
+diff --git a/src/vs/code/electron-sandbox/issue/media/issueReporter.css b/src/vs/code/electron-sandbox/issue/media/issueReporter.css
+index 8c452086409..c2a56e0c9d0 100644
+--- a/src/vs/code/electron-sandbox/issue/media/issueReporter.css
++++ b/src/vs/code/electron-sandbox/issue/media/issueReporter.css
+@@ -107,11 +107,11 @@ html {
+ 
+ /* Font Families (with CJK support) */
+ 
+-.mac { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+-.mac:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+-.mac:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+-.mac:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
+-.mac:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
++.mac { font-family: Recursive, -apple-system, BlinkMacSystemFont, sans-serif; }
++.mac:lang(zh-Hans) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
++.mac:lang(zh-Hant) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
++.mac:lang(ja) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
++.mac:lang(ko) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
+ 
+ .windows { font-family: "Segoe WPC", "Segoe UI", sans-serif; }
+ .windows:lang(zh-Hans) { font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif; }
+diff --git a/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css b/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
+index 3baf48ce1af..d1de0680720 100644
+--- a/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
++++ b/src/vs/code/electron-sandbox/processExplorer/media/processExplorer.css
+@@ -9,11 +9,11 @@ html {
+ 
+ /* Font Families (with CJK support) */
+ 
+-.mac { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+-.mac:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+-.mac:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+-.mac:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
+-.mac:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
++.mac { font-family: Recursive, -apple-system, BlinkMacSystemFont, sans-serif; }
++.mac:lang(zh-Hans) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
++.mac:lang(zh-Hant) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
++.mac:lang(ja) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
++.mac:lang(ko) { font-family: Recursive, -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
+ 
+ .windows { font-family: "Segoe WPC", "Segoe UI", sans-serif; }
+ .windows:lang(zh-Hans) { font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif; }
+diff --git a/src/vs/editor/common/config/editorOptions.ts b/src/vs/editor/common/config/editorOptions.ts
+index c76a65865ae..88f0c6a9139 100644
+--- a/src/vs/editor/common/config/editorOptions.ts
++++ b/src/vs/editor/common/config/editorOptions.ts
+@@ -5010,9 +5010,9 @@ class EditorPasteAs extends BaseEditorOption<EditorOption.pasteAs, IPasteAsOptio
+ 
+ //#endregion
+ 
+-const DEFAULT_WINDOWS_FONT_FAMILY = 'Consolas, \'Courier New\', monospace';
+-const DEFAULT_MAC_FONT_FAMILY = 'Menlo, Monaco, \'Courier New\', monospace';
+-const DEFAULT_LINUX_FONT_FAMILY = '\'Droid Sans Mono\', \'monospace\', monospace';
++const DEFAULT_WINDOWS_FONT_FAMILY = '\'Rec Mono Duotone\'';
++const DEFAULT_MAC_FONT_FAMILY = '\'Rec Mono Duotone\'';
++const DEFAULT_LINUX_FONT_FAMILY = '\'Rec Mono Duotone\'';
+ 
+ /**
+  * @internal
+@@ -5023,7 +5023,7 @@ export const EDITOR_FONT_DEFAULTS = {
+ 	),
+ 	fontWeight: 'normal',
+ 	fontSize: (
+-		platform.isMacintosh ? 12 : 14
++		platform.isMacintosh ? 11 : 14
+ 	),
+ 	lineHeight: 0,
+ 	letterSpacing: 0,
+diff --git a/src/vs/editor/standalone/browser/standalone-tokens.css b/src/vs/editor/standalone/browser/standalone-tokens.css
+index 0df4a9bac81..6ecf829b9c8 100644
+--- a/src/vs/editor/standalone/browser/standalone-tokens.css
++++ b/src/vs/editor/standalone/browser/standalone-tokens.css
+@@ -6,7 +6,7 @@
+ 
+ /* Default standalone editor fonts */
+ .monaco-editor {
+-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif;
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "HelveticaNeue-Light", system-ui, "Ubuntu", "Droid Sans", sans-serif;
+ 	--monaco-monospace-font: "SF Mono", Monaco, Menlo, Consolas, "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
+ }
+ 
+diff --git a/src/vs/workbench/browser/media/style.css b/src/vs/workbench/browser/media/style.css
+index 19500496d7e..e385a63749b 100644
+--- a/src/vs/workbench/browser/media/style.css
++++ b/src/vs/workbench/browser/media/style.css
+@@ -9,11 +9,29 @@
+ 
+ /* Font Families (with CJK support) */
+ 
+-.mac { font-family: -apple-system, BlinkMacSystemFont, sans-serif; }
+-.mac:lang(zh-Hans) { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; }
+-.mac:lang(zh-Hant) { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; }
+-.mac:lang(ja) { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif; }
+-.mac:lang(ko) { font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif; }
++body {
++	font-variation-settings: 'MONO' 0, 'CASL' 0, 'slnt' 0, 'CRSV' 0.5;
++}
++
++.mac {
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, sans-serif;
++}
++
++.mac:lang(zh-Hans) {
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif;
++}
++
++.mac:lang(zh-Hant) {
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif;
++}
++
++.mac:lang(ja) {
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic Pro", sans-serif;
++}
++
++.mac:lang(ko) {
++	font-family: Recursive, -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Apple SD Gothic Neo", "AppleGothic", sans-serif;
++}
+ 
+ .windows { font-family: "Segoe WPC", "Segoe UI", sans-serif; }
+ .windows:lang(zh-Hans) { font-family: "Segoe WPC", "Segoe UI", "Microsoft YaHei", sans-serif; }
+@@ -28,9 +46,17 @@
+ .linux:lang(ja) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans J", "Source Han Sans JP", "Source Han Sans", sans-serif; }
+ .linux:lang(ko) { font-family: system-ui, "Ubuntu", "Droid Sans", "Source Han Sans K", "Source Han Sans JR", "Source Han Sans", "UnDotum", "FBaekmuk Gulim", sans-serif; }
+ 
+-.mac { --monaco-monospace-font: "SF Mono", Monaco, Menlo, Courier, monospace; }
+-.windows { --monaco-monospace-font: Consolas, "Courier New", monospace; }
+-.linux { --monaco-monospace-font: "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace; }
++.mac {
++	--monaco-monospace-font: "Rec Mono Duotone", "SF Mono", Monaco, Menlo, Courier, monospace;
++}
++
++.windows {
++	--monaco-monospace-font: "Rec Mono Duotone", Consolas, "Courier New", monospace;
++}
++
++.linux {
++	--monaco-monospace-font: "Rec Mono Duotone", "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
++}
+ 
+ /* Global Styles */
+ 
+diff --git a/src/vs/workbench/browser/style.ts b/src/vs/workbench/browser/style.ts
+index 23f2e2bac99..1f61624067f 100644
+--- a/src/vs/workbench/browser/style.ts
++++ b/src/vs/workbench/browser/style.ts
+@@ -69,4 +69,4 @@ registerThemingParticipant((theme, collector) => {
+  *
+  * Note: this currently does not adjust for different locales.
+  */
+-export const DEFAULT_FONT_FAMILY = isWindows ? '"Segoe WPC", "Segoe UI", sans-serif' : isMacintosh ? '-apple-system, BlinkMacSystemFont, sans-serif' : 'system-ui, "Ubuntu", "Droid Sans", sans-serif';
++export const DEFAULT_FONT_FAMILY = "Recursive, " + (isWindows ? '"Segoe WPC", "Segoe UI", sans-serif' : isMacintosh ? '-apple-system, BlinkMacSystemFont, sans-serif' : 'system-ui, "Ubuntu", "Droid Sans", sans-serif');
+-- 
+2.42.1
+

@@ -1,0 +1,41 @@
+diff --git a/src/vs/base/browser/ui/hover/hover.css b/src/vs/base/browser/ui/hover/hover.css
+index ee294b766fb..53b2b5b4d83 100644
+--- a/src/vs/base/browser/ui/hover/hover.css
++++ b/src/vs/base/browser/ui/hover/hover.css
+@@ -10,7 +10,6 @@
+ 	user-select: text;
+ 	-webkit-user-select: text;
+ 	box-sizing: border-box;
+-	animation: fadein 100ms linear;
+ 	line-height: 1.5em;
+ 	white-space: var(--vscode-hover-whiteSpace, normal);
+ }
+diff --git a/src/vs/editor/contrib/hover/browser/hover.ts b/src/vs/editor/contrib/hover/browser/hover.ts
+index ba97e8c0dc9..beb4ce908ef 100644
+--- a/src/vs/editor/contrib/hover/browser/hover.ts
++++ b/src/vs/editor/contrib/hover/browser/hover.ts
+@@ -168,6 +168,8 @@ export class ModesHoverController extends Disposable implements IEditorContribut
+ 	}
+ 
+ 	private _isMouseOverWidget(mouseEvent: IEditorMouseEvent): boolean {
++		if (paperdave_stickyShiftKey) return true;
++
+ 		const target = mouseEvent.target;
+ 		if (
+ 			this._isHoverSticky
+@@ -741,3 +743,15 @@ registerThemingParticipant((theme, collector) => {
+ 		collector.addRule(`.monaco-editor .monaco-hover hr { border-bottom: 0px solid ${hoverBorder.transparent(0.5)}; }`);
+ 	}
+ });
++
++let paperdave_stickyShiftKey = false;
++document.addEventListener('keydown', (e: KeyboardEvent) => {
++	if (e.key == 'Shift') {
++		paperdave_stickyShiftKey = true;
++	}
++});
++document.addEventListener('keyup', (e: KeyboardEvent) => {
++	if (e.key == 'Shift') {
++		paperdave_stickyShiftKey = false;
++	}
++});
