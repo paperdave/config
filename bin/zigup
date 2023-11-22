@@ -1,2 +1,10 @@
 #!/bin/bash
-exec $HOME/.zig/bin/zigup --install-dir $HOME/.zig "$@"
+if ! [ -e $HOME/.zig ]; then
+  mkdir -p "$HOME/.zig/bin"
+  cd "$HOME/.zig/bin"
+  curl -fsSL https://github.com/marler8997/zigup/releases/latest/download/zigup.macos-latest-aarch64.zip > zigup.zip
+  unzip zigup.zip
+  rm zigup.zip
+  chmod +x zigup
+fi
+exec "$HOME/.zig/bin/zigup" --install-dir "$HOME/.zig" "$@"

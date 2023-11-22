@@ -1,5 +1,5 @@
-source ~/Code/config/env.sh
-source ~/Code/config/fish_prompt.fish
+source ~/code/config/env.sh
+source ~/code/config/fish_prompt.fish
 set fish_greeting
 
 function _wrap_with_tone
