@@ -1,0 +1,356 @@
+diff --git a/extensions/git/package.json b/extensions/git/package.json
+index 5f2acfa890d..210cea31dcc 100644
+--- a/extensions/git/package.json
++++ b/extensions/git/package.json
+@@ -3053,12 +3053,6 @@
+         "contents": "%view.workbench.cloneRepository%",
+         "when": "config.git.enabled && git.state == initialized && scm.providerCount == 0",
+         "group": "5_scm@1"
+-      },
+-      {
+-        "view": "explorer",
+-        "contents": "%view.workbench.learnMore%",
+-        "when": "config.git.enabled && git.state == initialized && scm.providerCount == 0",
+-        "group": "5_scm@10"
+       }
+     ]
+   },
+diff --git a/extensions/theme-defaults/package.json b/extensions/theme-defaults/package.json
+index 2458ef317da..1cff8f8abf9 100644
+--- a/extensions/theme-defaults/package.json
++++ b/extensions/theme-defaults/package.json
+@@ -13,6 +13,12 @@
+   },
+   "contributes": {
+     "themes": [
++      {
++        "id": "Glass Airplane Dark",
++        "label": "%glassAirplaneDarkColorThemeLabel%",
++        "uiTheme": "vs-dark",
++        "path": "./themes/glass_airplane.json"
++      },
+       {
+         "id": "Default Dark+",
+         "label": "%darkPlusColorThemeLabel%",
+diff --git a/extensions/theme-defaults/package.nls.json b/extensions/theme-defaults/package.nls.json
+index cacbd6b8d9a..2ab55679e31 100644
+--- a/extensions/theme-defaults/package.nls.json
++++ b/extensions/theme-defaults/package.nls.json
+@@ -1,6 +1,7 @@
+ {
+ 	"displayName": "Default Themes",
+ 	"description": "The default Visual Studio light and dark themes",
++	"glassAirplaneDarkColorThemeLabel": "Glass Airplane Dark",
+ 	"darkPlusColorThemeLabel": "Dark+",
+ 	"darkModernThemeLabel": "Dark Modern",
+ 	"lightPlusColorThemeLabel": "Light+",
+diff --git a/extensions/theme-defaults/themes/glass_airplane.json b/extensions/theme-defaults/themes/glass_airplane.json
+new file mode 100644
+index 00000000000..5a6270286bb
+--- /dev/null
++++ b/extensions/theme-defaults/themes/glass_airplane.json
+@@ -0,0 +1,219 @@
++{
++	"$schema": "vscode://schemas/color-theme",
++	"name": "Glass Airplane Dark",
++	"colors": {
++		"editor.background": "#0000",
++		"editor.foreground": "#fff0fff9",
++		"foreground": "#fff0fff9",
++		//
++		"activityBar.background": "#0000",
++		"activityBar.activeBackground": "#10052244",
++		"activityBar.inactiveForeground": "#ee72ff86",
++		"activityBar.activeBorder": "#d681f0",
++		"activityBar.foreground": "#fff0fff9",
++		"activityBar.activeFocusBorder": "#ff41ff",
++		"activityBar.border": "#0000",
++		//
++		"activityBarBadge.background": "#ffffff",
++		"activityBarBadge.foreground": "#470f58",
++		//
++		"sideBar.background": "#10052244",
++		//
++		"sideBarSectionHeader.background": "#f9f2",
++		//
++		"statusBar.background": "#1024",
++		"statusBar.noFolderBackground": "#1024",
++		//
++		"titleBar.inactiveBackground": "#0005",
++		"titleBar.activeBackground": "#0007",
++		//
++		"button.background": "#b93ede",
++		"button.secondaryBackground": "#544165",
++		//
++		"textLink.foreground": "#d681f0",
++		"textLink.activeForeground": "#d036ff",
++		//
++		"editorGroupHeader.tabsBackground": "#1022",
++		//
++		"editorGroup.border": "#0000",
++		//
++		"tab.inactiveBackground": "#0000",
++		"tab.activeBackground": "#0005",
++		//
++		"notifications.background": "#30223d",
++		//
++		"list.inactiveSelectionBackground": "#90f2",
++		"list.focusBackground": "#d3f2",
++		"list.dropBackground": "#fff8",
++		"list.hoverBackground": "#fff1",
++		"list.inactiveFocusBackground": "#d3f2",
++		"list.filterMatchBackground": "#f002",
++		"list.activeSelectionBackground": "#90f3",
++		//
++		"focusBorder": "#d036ff",
++		//
++		"editorLineNumber.foreground": "#fff5",
++		"editorLineNumber.activeForeground": "#fcff",
++		"editorLineNumber.dimmedForeground": "#fff2",
++	},
++	"tokenColors": [
++		{
++			"scope": [
++				"comment"
++			],
++			"settings": {
++				"foreground": "#ffb8ff70",
++				"fontStyle": "italic"
++			}
++		},
++		{
++			"scope": [
++				"comment.line.documentation",
++				"comment.block.documentation",
++			],
++			"settings": {
++				"foreground": "#ff8cff70",
++				"fontStyle": "italic"
++			}
++		},
++		{
++			"scope": [
++				"keyword.control",
++				"keyword.type",
++				"keyword.storage",
++				"keyword.default",
++				"keyword.structure",
++				"storage.type"
++			],
++			"settings": {
++				"foreground": "#a778fa",
++				"fontStyle": "bold"
++			}
++		},
++		{
++			"scope": [
++				"keyword.control",
++			],
++			"settings": {
++				"foreground": "#c5a3ff",
++				"fontStyle": "bold"
++			}
++		},
++		{
++			"scope": [
++				"keyword.control.trycatch",
++			],
++			"settings": {
++				"foreground": "#ff69be",
++				"fontStyle": "bold"
++			}
++		},
++		{
++			"scope": [
++				"keyword.control.flow",
++			],
++			"settings": {
++				"foreground": "#a3a8ff",
++				"fontStyle": "italic bold"
++			}
++		},
++		{
++			"scope": [
++				"keyword.operator",
++			],
++			"settings": {
++				"foreground": "#fdb9ff"
++			}
++		},
++		{
++			"scope": [
++				"keyword.storage.zig",
++			],
++			"settings": {
++				"foreground": "#d378faee",
++				"fontStyle": "bold"
++			}
++		},
++		{
++			"scope": [
++				"constant",
++				"keyword.constant"
++			],
++			"settings": {
++				"foreground": "#fcc670"
++			}
++		},
++		{
++			"scope": "entity.name.function",
++			"settings": {
++				"foreground": "#5dc1ff"
++			}
++		},
++		{
++			"scope": [
++				"keyword.type.zig",
++			],
++			"settings": {
++				"foreground": "#db3d3d",
++				"fontStyle": ""
++			}
++		},
++		{
++			"scope": [
++				"keyword.type",
++				"support.type.primitive"
++			],
++			"settings": {
++				"foreground": "#ff846b",
++				"fontStyle": ""
++			}
++		},
++		{
++			"scope": "support.function.builtin",
++			"settings": {
++				"foreground": "#ff6b6b"
++			}
++		},
++		{
++			"scope": "string",
++			"settings": {
++				"foreground": "#78fabb"
++			}
++		},
++		{
++			"scope": "meta.template",
++			"settings": {
++				"foreground": "#ac97da"
++			}
++		},
++		{
++			"scope": "constant.character",
++			"settings": {
++				"foreground": "#58aaaa",
++				"fontStyle": "bold"
++			}
++		},
++		{
++			"scope": "support.type.property-name",
++			"settings": {
++				"foreground": "#82edf9"
++			}
++		},
++		{
++			"scope": "variable.other.constant",
++			"settings": {
++				"foreground": "#d4cffc"
++			}
++		},
++	],
++	"semanticHighlighting": true,
++	"semanticTokenColors": {
++		"namespace": "#f74dab",
++		"type": "#ef75ff",
++		"variable": "#f999ce",
++		"property": "#fcd7f8",
++		"struct": "#707cff",
++		"enum": "#70acff",
++		"errorTag": "#ff9999"
++	}
++}
+diff --git a/src/vs/base/browser/ui/list/listWidget.ts b/src/vs/base/browser/ui/list/listWidget.ts
+index 02db4869cfe..72f878ede52 100644
+--- a/src/vs/base/browser/ui/list/listWidget.ts
++++ b/src/vs/base/browser/ui/list/listWidget.ts
+@@ -873,7 +873,7 @@ export class DefaultStyleController implements IStyleController {
+ 		const content: string[] = [];
+ 
+ 		if (styles.listBackground) {
+-			content.push(`.monaco-list${suffix} .monaco-list-rows { background: ${styles.listBackground}; }`);
++			// content.push(`.monaco-list${suffix} .monaco-list-rows { background: ${styles.listBackground}; }`);
+ 		}
+ 
+ 		if (styles.listFocusBackground) {
+diff --git a/src/vs/platform/theme/electron-main/themeMainService.ts b/src/vs/platform/theme/electron-main/themeMainService.ts
+index 9a6e96f3e87..cb37e21b86e 100644
+--- a/src/vs/platform/theme/electron-main/themeMainService.ts
++++ b/src/vs/platform/theme/electron-main/themeMainService.ts
+@@ -120,7 +120,7 @@ export class ThemeMainService extends Disposable implements IThemeMainService {
+ 	private updateBackgroundColor(windowId: number, splash: IPartsSplash): void {
+ 		for (const window of BrowserWindow.getAllWindows()) {
+ 			if (window.id === windowId) {
+-				window.setBackgroundColor(splash.colorInfo.background);
++				// window.setBackgroundColor(splash.colorInfo.background);
+ 				break;
+ 			}
+ 		}
+diff --git a/src/vs/platform/windows/electron-main/windowImpl.ts b/src/vs/platform/windows/electron-main/windowImpl.ts
+index b68fb6ebef1..98b2b22e6b6 100644
+--- a/src/vs/platform/windows/electron-main/windowImpl.ts
++++ b/src/vs/platform/windows/electron-main/windowImpl.ts
+@@ -519,6 +519,11 @@ export class CodeWindow extends BaseWindow implements ICodeWindow {
+ 				}
+ 			});
+ 
++			options.transparent = true;
++			options.backgroundColor = '#00000000';
++			options.hasShadow = true;
++			options.vibrancy = 'hud';
++			options.visualEffectState = 'active';
+ 
+ 			// Create the browser window
+ 			mark('code/willCreateCodeBrowserWindow');
+diff --git a/src/vs/workbench/common/theme.ts b/src/vs/workbench/common/theme.ts
+index c09ca6b8053..c39c1ca9cc4 100644
+--- a/src/vs/workbench/common/theme.ts
++++ b/src/vs/workbench/common/theme.ts
+@@ -12,6 +12,10 @@ import { ColorScheme } from 'vs/platform/theme/common/theme';
+ // < --- Workbench (not customizable) --- >
+ 
+ export function WORKBENCH_BACKGROUND(theme: IColorTheme): Color {
++	switch (theme.label) {
++		case 'Glass Airplane Dark':
++			return Color.fromHex('#1a1226c0');
++	}
+ 	switch (theme.type) {
+ 		case ColorScheme.LIGHT:
+ 			return Color.fromHex('#F3F3F3');
+diff --git a/src/vs/workbench/contrib/splash/browser/partsSplash.ts b/src/vs/workbench/contrib/splash/browser/partsSplash.ts
+index 60b8ea9abe1..c86633debde 100644
+--- a/src/vs/workbench/contrib/splash/browser/partsSplash.ts
++++ b/src/vs/workbench/contrib/splash/browser/partsSplash.ts
+@@ -68,8 +68,8 @@ export class PartsSplash {
+ 			baseTheme: getThemeTypeSelector(theme.type),
+ 			colorInfo: {
+ 				foreground: theme.getColor(foreground)?.toString(),
+-				background: Color.Format.CSS.formatHex(theme.getColor(editorBackground) || themes.WORKBENCH_BACKGROUND(theme)),
+-				editorBackground: theme.getColor(editorBackground)?.toString(),
++				background: '#9900ff05' || Color.Format.CSS.formatHex(theme.getColor(editorBackground) || themes.WORKBENCH_BACKGROUND(theme)),
++				editorBackground: '#9900ff05' || theme.getColor(editorBackground)?.toString(),
+ 				titleBarBackground: theme.getColor(themes.TITLE_BAR_ACTIVE_BACKGROUND)?.toString(),
+ 				activityBarBackground: theme.getColor(themes.ACTIVITY_BAR_BACKGROUND)?.toString(),
+ 				sideBarBackground: theme.getColor(themes.SIDE_BAR_BACKGROUND)?.toString(),
+diff --git a/src/vs/workbench/services/themes/common/workbenchThemeService.ts b/src/vs/workbench/services/themes/common/workbenchThemeService.ts
+index 22ebde5b0b8..bf7cc98bd30 100644
+--- a/src/vs/workbench/services/themes/common/workbenchThemeService.ts
++++ b/src/vs/workbench/services/themes/common/workbenchThemeService.ts
+@@ -41,7 +41,7 @@ export enum ThemeSettings {
+ }
+ 
+ export enum ThemeSettingDefaults {
+-	COLOR_THEME_DARK = 'Default Dark Modern',
++	COLOR_THEME_DARK = 'Glass Airplane Dark',
+ 	COLOR_THEME_LIGHT = 'Default Light Modern',
+ 	COLOR_THEME_HC_DARK = 'Default High Contrast',
+ 	COLOR_THEME_HC_LIGHT = 'Default High Contrast Light',

@@ -3,7 +3,7 @@
 - install homebrew
 
 ```
-brew install git fish
+brew install git fish gh node
 ```
 
 - sshkey
@@ -25,6 +25,7 @@ source ~/code/config/fish_config.fish
 - keyboard maestro
 - ghostty
 - topnotch
+- mpv
 
 ## keyboard repeat
 
@@ -36,10 +37,10 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 
 ## install zig
 
-a zigup wrapper is included within ./bin/zigup
+a zigup wrapper is included within `./bin/zigup`. it installs itself
 
 ```
-zigup
+zigup master
 ```
 
 ## `/run` binary
@@ -54,3 +55,11 @@ run    Users/dave/code/config/bin/my-env
 ## CodeEditor
 
 `./CodeEditor/build.sh`
+
+## Set Up Defaults
+
+- `mp3`
+
+## Other tasks
+
+- Connect bluetooth mouse
