@@ -45,6 +45,9 @@ sed -i '' 's/Corporation|CodeEditor/Corporation|paperdave/' prepare_vscode.sh
 sed -i '' 's|CodeEditor/vscodium|VSCodium/vscodium|' prepare_vscode.sh
 sed -i '' 's/setpath "product" "applicationName" "codium"/setpath "product" "applicationName" "code"/' prepare_vscode.sh
 
+# fixes remote extension version mismatches, as they download the latest release
+export RELEASE_VERSION="$(cat ../release)"
+
 ./build/build.sh
 
 rm -fr /Applications/CodeEditor.app
