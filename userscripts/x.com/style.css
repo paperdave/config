@@ -1,13 +1,39 @@
+/* the following mods are targetting using either
+ * - anchor URLs. very hard to break unless X.com
+ *   changes their route layout
+ * - accessibility labels. probably breakable, but
+ *   should be stable for the most part.
+ * - ui test ids. these can break if they redo their
+ *   components or want to specifically target me.
+ *
+ * The key is we want to avoid class names. These can
+ * break just by them deploying a new build of the app.
+ */
+
+/* remove everything in right side besides search */
 [aria-label="Trending"] > div > *:not(:first-child),
+/* various left sidebar links */
 [href="/explore"],
 [href="/i/grok"],
 [href="/i/premium_sign_up"],
 [href="/i/verified-orgs-signup"],
+/* remove all post stats */
 [data-testid="app-text-transition-container"],
-[d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"],
+/* remove post views */
+[href$="/analytics"][href*="/status/"],
+/* remove follower and following counts */
 [href$="/verified_followers"],
 [href$="/following"],
-[data-testid="primaryColumn"] h2 + div
+/* remove post count in profile header */
+[data-testid="primaryColumn"] h2 + div,
+/* remove promote button */
+[href$="/quick_promote_web/intro"],
+/* remove view post engagements */
+[href$="/quotes"],
+/* remove views next to post timestamp */
+article > div > div > div:last-child > div[class*=" r-"] > div > div > div > [dir="ltr"]:first-child ~ div,
+/* remove like button, i don't use it personally */
+[aria-label$=". Like"]
 {
     display: none;
 }
