@@ -18,11 +18,11 @@ const rules = [
       // remap caps lock
       map("caps_lock")
         .to(CapsLockModifiers[0], CapsLockModifiers.slice(1))
-        .toIfAlone("f13", CapsLockModifiers),
+        .toIfAlone("escape").,
 
-      map("left_control")
-        .to(HyperModifiers[0], HyperModifiers.slice(1))
-        .toIfAlone("f13", HyperModifiers),
+      // map("left_control")
+      //   .to(HyperModifiers[0], HyperModifiers.slice(1))
+      //   .toIfAlone("left_control"),
 
       // allow caps+delete
       map("delete_or_backspace", CapsLockModifiers).to("delete_forward"),

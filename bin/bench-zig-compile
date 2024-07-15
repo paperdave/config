@@ -1,0 +1,2 @@
+#!/bin/sh
+zig build-exe -fno-llvm -fno-lld -target x86_64-linux-gnu -O Debug --dep aro_translate_c --dep aro --dep build_options --mod root src/main.zig --mod aro_translate_c lib/compiler/aro_translate_c.zig --mod aro lib/compiler/aro/aro.zig --mod build_options /Users/dave/code/zig/zig-cache/c/a147207d644954d6a697f450ab0c6f22/options.zig --zig-lib-dir lib

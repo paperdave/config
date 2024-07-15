@@ -15,12 +15,7 @@ function fish_prompt
 
         # branch
         set -l branchname (git symbolic-ref --short HEAD 2>/dev/null)
-        set -l mainbranch (git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null)
-        set -l mainbranch (string sub -s 11 "$mainbranch")
-        if test -z "$mainbranch"
-            set mainbranch main
-        end
-        if test "$branchname" != "$mainbranch"
+        if test "$branchname" != "main" && test "$branchname" != "master"
             set -l branchname (string split / $branchname)[-1]
             printf (set_color magenta)\($branchname\)
         end

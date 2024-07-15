@@ -1,0 +1,4 @@
+#!/bin/sh
+hyperfine \
+  -n new 'cd ~/code/zig && bench-zig-compile' \
+  -n before 'cd ~/code/zig-master && bench-zig-compile'

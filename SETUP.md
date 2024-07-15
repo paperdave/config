@@ -45,11 +45,12 @@ zigup master
 
 ## `/run` binary
 
+`sudo vim` in `/etc/synthetic.conf`
 
-`sudo nano` in `/etc/synthetic.conf`
 ```
 run    Users/dave/code/config/bin/my-env
 ```
+
 **warn**: you MUST use a tab character for
 
 ## CodeEditor

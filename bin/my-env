@@ -1,5 +1,5 @@
-#!/bin/bash
-# my-env [command] [args...]
+#!/bin/sh
+# /run [command] [args...]
 # ensures env vars are set before running command
 source /Users/dave/Code/config/env.sh
 exec "$@"

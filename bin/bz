@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+pushd /Users/dave/code/zig > /dev/null
+zig build --search-prefix /Users/dave/code/zig-bootstrap/out/aarch64-macos-none-native --zig-lib-dir /Users/dave/code/zig/lib -Denable-llvm=true
+popd > /dev/null
+/Users/dave/code/zig/zig-out/bin/zig $@
